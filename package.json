@@ -19,7 +19,8 @@
     ".": {
       "import": "./dist/datalist.es.js",
       "require": "./dist/datalist.umd.js"
-    }
+    },
+    "./dist/react-datalist-jld.css": "./dist/react-datalist-jld.css"
   },
   "files": [
     "dist"
