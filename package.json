@@ -1,6 +1,6 @@
 {
   "name": "react-datalist-jld",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A reusable and customizable React data table component with search, sort, and pagination.",
   "keywords": [
     "react",
@@ -21,7 +21,7 @@
       "require": "./dist/datalist.umd.js"
     },
     "./react-datalist-jld.css": {
-    "default": "./dist/react-datalist-jld.css"
+      "default": "./dist/react-datalist-jld.css"
     }
   },
   "files": [
