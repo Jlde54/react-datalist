@@ -1,12 +1,80 @@
-# React + Vite
+# React DataList
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A reusable and customizable React data table component with search, sort, and pagination.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real-time search across all fields
+- Clickable sortable column headers (ascending/descending)
+- Pagination with configurable entries per page
+- Modular SCSS styles using BEM naming
+- Prop validation using [prop-types]
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm install react-datalist
+
+ This package requires react, react-dom and prop-types to be already installed as peer dependencies.
+
+## Usage
+
+
+- In the component calling the array :
+import DataList from 'react-datalist-jld'
+
+const data = [
+  { firstName: 'Alice', lastName: Smith, birthDate: '2005-01-01', city: 'New-York' },
+  { firstName: 'Bob', lastName: Scott, birthDate: '2001-06-23', city: 'Washington' }
+]
+
+const columns = [
+  { title: 'First Name', property: 'firstName' },
+  { title: 'Last Name', property: 'lastName' },
+  { title: 'Date of Birth', property: 'birthDate' },
+  { title: 'City', property: 'city' }
+]
+
+function App() {
+  return (
+    <DataList
+      data={data}
+      columns={columns}
+      title="Employee List"
+      noDataText="No results found."
+      entriesOptions={[5, 10, 50, 100]}
+    />
+  )
+}
+
+- In the main.jsx or index.js :
+import 'react-datalist-jld/dist/react-datalist-jld.css'
+
+## Props
+
+Prop              Type                            Required    Description
+data              arrayOf(object)                 yes         The data to display in the table
+columns           arrayOf({ title, property })    yes         Configuration for columns (title shown and object property key)
+title             string                          no          Title displayed above the table
+noDataText        string                          no          Text displayed when no results match the search
+entriesOptions    arrayOf(number)                 no          Options for entries per page selection (e.g., [5, 10, 25])
+
+Prop Validation : This component uses prop-types to validate all props during development.
+
+## Style
+
+- Uses SCSS Modules (DataList.module.scss)
+- Follows BEM-style naming (.dataList__title, .dataList__table, etc.)
+- Fully responsive with scroll support on small screens
+- You can override or extend styles by copying the SCSS file or using your own
+
+## Development
+
+To install dependencies and run the project locally:
+npm install
+npm run dev
+
+To build the library: npm run build
+
+## License
+
+MIT © JLD
