@@ -20,7 +20,9 @@
       "import": "./dist/datalist.es.js",
       "require": "./dist/datalist.umd.js"
     },
-    "./dist/react-datalist-jld.css": "./dist/react-datalist-jld.css"
+    "./react-datalist-jld.css": {
+    "default": "./dist/react-datalist-jld.css"
+    }
   },
   "files": [
     "dist"
@@ -42,6 +44,7 @@
     "vite": "^6.3.4"
   },
   "dependencies": {
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "react-datalist-jld": "^1.0.2"
   }
 }
