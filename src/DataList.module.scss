@@ -1,22 +1,24 @@
+@import './-variables.scss';
+@import './-mixins.scss';
+
 .dataList {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #fff;
+    background-color: $bg-white-color;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   
     &__title {
+      @include fontStyle(2rem, 700);
       text-align: center;
       font-size: 2rem;
       margin-bottom: 1.5rem;
-      color: #003049;
+      color: $title-color;
     }
 
     &__controls {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include flexContainer(row, space-between, stretch);
       margin-bottom: 1rem;
       flex-wrap: wrap;
       gap: 1rem;
@@ -25,7 +27,7 @@
     &__empty {
       text-align: center;
       font-style: italic;
-      color: #777;
+      color: $noDataText-color;
     }
   
     &__tableWrapper {
@@ -33,33 +35,31 @@
     }
   
     &__table {
+      @include fontStyle(0.95rem, 400);
       min-width: 800px;
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.95rem;
   
       th, td {
         padding: 0.75rem 1rem;
         text-align: left;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $border-color;
         white-space: nowrap;
       }
   
       th {
-        background-color: #f3f3f3;
-        font-weight: 600;
+        @include fontStyle(0.95rem, 600);
+        background-color: $bg-th-color;
       }
   
       tr:hover {
-        background-color: #f9f9f9;
+        background-color: $bg-trhover-color;
       }
     }
 
     &__th {
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      @include flexContainer(row, flex-start, center);
       gap: 0.3rem;
     }
   
@@ -68,12 +68,10 @@
     }
   
     &__sortIcons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include flexContainer(column, center, center);
+      @include fontStyle(0.6rem, 600);
       font-size: 0.6rem;
-      color: rgb(176, 174, 174);
+      color: $icons-color;
     }
   
     &__triangle {
@@ -81,14 +79,12 @@
     }
   
     &__triangle.active {
-      color: #0f6aee;
+      color: $icon-active-color;
       font-weight: bold;
     }
   
     &__footer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include flexContainer(row, space-between, stretch);
       margin-top: 1rem;
       flex-wrap: wrap;
       gap: 1rem;

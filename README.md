@@ -47,7 +47,7 @@ function App() {
 }
 
 - In the main.jsx or index.js :
-import 'react-datalist-jld/dist/react-datalist-jld.css'
+import 'react-datalist-jld/react-datalist-jld.css'
 
 ## Props
 
