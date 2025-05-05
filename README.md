@@ -12,7 +12,7 @@ A reusable and customizable React data table component with search, sort, and pa
 
 ## Installation
 
-npm install react-datalist
+npm install react-datalist-jld
 
  This package requires react, react-dom and prop-types to be already installed as peer dependencies.
 
