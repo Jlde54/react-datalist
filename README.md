@@ -21,7 +21,7 @@ npm install react-datalist-jld
 
 - In the component calling the array :
 import DataList from 'react-datalist-jld'
-
+```
 const data = [
   { firstName: 'Alice', lastName: Smith, birthDate: '2005-01-01', city: 'New-York' },
   { firstName: 'Bob', lastName: Scott, birthDate: '2001-06-23', city: 'Washington' }
@@ -45,18 +45,19 @@ function App() {
     />
   )
 }
-
+```
 - In the main.jsx or index.js :
 import 'react-datalist-jld/react-datalist-jld.css'
 
 ## Props
 
-Prop              Type                            Required    Description
-data              arrayOf(object)                 yes         The data to display in the table
-columns           arrayOf({ title, property })    yes         Configuration for columns (title shown and object property key)
-title             string                          no          Title displayed above the table
-noDataText        string                          no          Text displayed when no results match the search
-entriesOptions    arrayOf(number)                 no          Options for entries per page selection (e.g., [5, 10, 25])
+|Prop              |Type                            |Required    |Description
+|:-----------------|:-------------------------------|:-----------|:----------
+|data              |arrayOf(object)                 |yes         |The data to display in the table  
+|columns           |arrayOf({ title, property })    |yes         |Configuration for columns (title shown and object property key)  
+|title             |string                          |no          |Title displayed above the table  
+|noDataText        |string                          |no          |Text displayed when no results match the search  
+|entriesOptions    |arrayOf(number)                 |no          |Options for entries per page selection (e.g., [5, 10, 25])  
 
 Prop Validation : This component uses prop-types to validate all props during development.
 
@@ -69,11 +70,12 @@ Prop Validation : This component uses prop-types to validate all props during de
 
 ## Development
 
-To install dependencies and run the project locally:
-npm install
-npm run dev
+To install dependencies and run the project locally :  
+- npm install  
+- npm run dev  
 
-To build the library: npm run build
+To build the library :  
+- npm run build
 
 ## License
 
