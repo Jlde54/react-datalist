@@ -4,6 +4,14 @@ A reusable and customizable React data table component with search, sort, and pa
 
 Available on npm : https://www.npmjs.com/package/react-datalist-jld
 
+## Prerequisites
+
+- Node.js **>= 16.0.0** ([Download here](https://nodejs.org/))
+- npm (ou yarn)
+- React **>= 18.0.0** and ReactDOM
+- A modern code editor like **[Visual Studio Code](https://code.visualstudio.com/)**
+- A modern web browser (Chrome, Firefox, …)
+
 ## Features
 
 - Real-time search across all fields
