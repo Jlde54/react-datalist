@@ -2,6 +2,8 @@
 
 A reusable and customizable React data table component with search, sort, and pagination.
 
+Available on npm : https://www.npmjs.com/package/react-datalist-jld
+
 ## Features
 
 - Real-time search across all fields
@@ -11,9 +13,9 @@ A reusable and customizable React data table component with search, sort, and pa
 - Prop validation using [prop-types]
 
 ## Installation
-
+```
 npm install react-datalist-jld
-
+```
  This package requires react, react-dom and prop-types to be already installed as peer dependencies.
 
 ## Usage
